@@ -8,13 +8,13 @@ public class Flight {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer flightId;
-    @Column(nullable = false, unique = true)
+    @Column(name = "number",nullable = false, unique = true)
     private String flightNumber;
     @Column(nullable = false)
     private String aircraft;
-    @Column(nullable = false)
+    @Column(name = "total_seats",nullable = false)
     private Integer totalAircraftSeats;
-    @Column(nullable = false)
+    @Column(name = "milage", nullable = false)
     private Integer flightMilage;
 
     public Flight() {}

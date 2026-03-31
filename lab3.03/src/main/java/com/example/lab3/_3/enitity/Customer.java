@@ -8,12 +8,12 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer cusotmerId;
-    @Column(nullable = false,length = 100)
+    @Column(nullable = false,length = 100,name = "name")
     private String customerName;
-    @Column(nullable = false)
+    @Column(nullable = false,name = "status")
     @Enumerated(EnumType.STRING)
     private CustomerStatus customerStatus;
-    @Column(nullable = false)
+    @Column(nullable = false, name = "total_milage")
     private Integer totalCustomerMilage;
 
     public Customer() {}
