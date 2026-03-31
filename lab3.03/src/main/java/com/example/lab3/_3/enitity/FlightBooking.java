@@ -11,10 +11,10 @@ public class FlightBooking {
     @Column(nullable = false)
     private Integer customerId;
     @Column(nullable = false)
-    private String flightId;
+    private Integer flightId;
     public FlightBooking() {}
 
-    public FlightBooking(Integer customerId, String flightId) {
+    public FlightBooking(Integer customerId, Integer flightId) {
         this.customerId = customerId;
         this.flightId = flightId;
     }
@@ -31,11 +31,11 @@ public class FlightBooking {
         this.customerId = customerId;
     }
 
-    public String getFlightId() {
+    public Integer getFlightId() {
         return flightId;
     }
 
-    public void setFlightId(String flightId) {
+    public void setFlightId(Integer flightId) {
         this.flightId = flightId;
     }
 }
